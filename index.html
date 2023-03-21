@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cursor</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="table-block">
+        <table>
+            <thead>
+                <tr>
+                    <th>Test</th>
+                    <th>Test 2</th>
+                    <th>Test 3</th>
+                    <th>Test 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>123</td>
+                    <td>542</td>
+                    <td>342</td>
+                    <td>532</td>
+                </tr>
+                <tr>
+                    <td>23434</td>
+                    <td>534</td>
+                    <td>324</td>
+                    <td>345</td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>546</td>
+                    <td>763</td>
+                    <td>32</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-block table-block_black">
+        <table>
+            <thead>
+            <tr>
+                <th>Test</th>
+                <th>Test 2</th>
+                <th>Test 3</th>
+                <th>Test 4</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>123</td>
+                <td>542</td>
+                <td>342</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>23434</td>
+                <td>534</td>
+                <td>324</td>
+                <td>345</td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>546</td>
+                <td>763</td>
+                <td>32</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-block">
+        <button onclick="lightCr.enable();">On</button>
+        <button onclick="lightCr.disable();">Off</button>
+        <button onclick="lightCr.setColor('#000000');">Black</button>
+        <button onclick="lightCr.setColor('#ffffff');">White</button>
+
+        <input type="color" onchange="lightCr.setColor(this.value);" />
+
+        <input type="range" min="0.05" max="1" step="0.01" value="0.95" onchange="lightCr.setOpacity(this.value);" />
+
+        <input type="range" min="50" max="700" step="1" value="300" onchange="lightCr.setRadius(this.value, this.value / 1.75);" />
+    </div>
+</body>
+
+<script src="light_cr/light_cr.min.js"></script>
+
+<script>
+    lightCr.init(300, 175, 0.95, '#000000', true);
+</script>
+
+</html>
